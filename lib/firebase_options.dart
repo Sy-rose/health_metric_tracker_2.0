@@ -52,7 +52,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1054386875264',
     projectId: 'healthmetrictracker',
     authDomain: 'healthmetrictracker.firebaseapp.com',
-    storageBucket: 'healthmetrictracker.appspot.com',
+    storageBucket: 'healthmetrictracker.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -60,7 +60,7 @@ class DefaultFirebaseOptions {
     appId: '1:1054386875264:android:69671f82703fcf37daaf65',
     messagingSenderId: '1054386875264',
     projectId: 'healthmetrictracker',
-    storageBucket: 'healthmetrictracker.appspot.com',
+    storageBucket: 'healthmetrictracker.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -68,7 +68,8 @@ class DefaultFirebaseOptions {
     appId: '1:1054386875264:ios:ccdd8506e580eb2fdaaf65',
     messagingSenderId: '1054386875264',
     projectId: 'healthmetrictracker',
-    storageBucket: 'healthmetrictracker.appspot.com',
+    storageBucket: 'healthmetrictracker.firebasestorage.app',
     iosBundleId: 'com.example.healthMetricsTracker',
   );
+
 }

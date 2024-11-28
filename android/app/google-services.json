@@ -2,7 +2,7 @@
   "project_info": {
     "project_number": "1054386875264",
     "project_id": "healthmetrictracker",
-    "storage_bucket": "healthmetrictracker.appspot.com"
+    "storage_bucket": "healthmetrictracker.firebasestorage.app"
   },
   "client": [
     {

@@ -17,4 +17,6 @@ class Patient extends Equatable {
 
   @override
   List<Object?> get props => [id, name, age, gender, contactInfo];
+
+  get patientIds => null;
 }

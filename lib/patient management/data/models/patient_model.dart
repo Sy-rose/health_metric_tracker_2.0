@@ -1,21 +1,15 @@
 import 'dart:convert';
-import '../../domain/entities/patient.dart';
+import 'package:health_metrics_tracker/patient%20management/domain/entities/patient.dart';
+
 
 class PatientModel extends Patient {
   const PatientModel({
-    required String id,
-    required String name,
-    required int age,
-    required String gender,
-    required String contactInfo,
-  }) : 
-  super(
-          id: id,
-          name: name,
-          age: age,
-          gender: gender,
-          contactInfo: contactInfo,
-        );
+    required super.id,
+    required super.name,
+    required super.age,
+    required super.gender,
+    required super.contactInfo,
+  });
 
   // Factory method to create a PatientModel from a Map
   factory PatientModel.fromMap(Map<String, dynamic> map) {

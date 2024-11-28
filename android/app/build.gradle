@@ -26,7 +26,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.health_metrics_tracker"
+    namespace "com.example.flutter_firebase_Setup"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
