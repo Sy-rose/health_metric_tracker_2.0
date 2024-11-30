@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(
-      body: EmptyStateList(
-        imageAssetName: 'assets/Designer.png',
-        title: 'Oops...There are no healthMetric here',
-        description: "Tap '+' button to add a new healthMetric",
-      ),
-    ),
-  ));
-}
-
 class EmptyStateList extends StatelessWidget {
   final String imageAssetName;
   final String title;

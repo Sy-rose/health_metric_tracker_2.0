@@ -1,4 +1,3 @@
-
 // ignore_for_file: use_build_context_synchronously, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
@@ -11,9 +10,11 @@ import 'package:health_metrics_tracker/healthmetric%20managment/domain/entities/
 import 'package:health_metrics_tracker/healthmetric%20managment/presentation/add_edit_health_metric_page.dart';
 import 'package:health_metrics_tracker/healthmetric%20managment/presentation/cubit/health_metric_cubit.dart';
 import 'package:health_metrics_tracker/healthmetric%20managment/presentation/cubit/health_metric_state.dart';
+import 'package:intl/intl.dart';
 
 class ViewAllHealthMetricsPage extends StatefulWidget {
-  const ViewAllHealthMetricsPage({super.key, required HealthMetric healthMetric});
+  const ViewAllHealthMetricsPage(
+      {super.key, required HealthMetric healthMetric});
 
   @override
   State<ViewAllHealthMetricsPage> createState() =>
@@ -132,6 +133,5 @@ class _ViewAllHealthMetricsPageState extends State<ViewAllHealthMetricsPage> {
       ),
     );
   }
-  
-  DateFormat(String s) {}
+
 }

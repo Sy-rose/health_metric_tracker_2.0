@@ -1,21 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        body: ErrorStateList(
-          imageAssetName: 'assets/images/error.png',
-          errorMessage:
-              'The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog.',
-          onRetry: () {
-            debugPrint("Reload the page");
-          }, message: '',
-        ),
-      ),
-    ),
-  );
-}
 
 class ErrorStateList extends StatelessWidget {
   final String imageAssetName;

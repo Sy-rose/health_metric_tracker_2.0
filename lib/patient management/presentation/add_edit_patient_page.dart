@@ -21,8 +21,10 @@ class _AddEditPatientPageState extends State<AddEditPatientPage> {
 
   @override
   Widget build(BuildContext context) {
-    String appBarTitle = widget.patient == null ? "Add New Patient" : "Edit Patient";
-    String buttonLabel = widget.patient == null ? "Add Patient" : "Update Patient";
+    String appBarTitle =
+        widget.patient == null ? "Add New Patient" : "Edit Patient";
+    String buttonLabel =
+        widget.patient == null ? "Add Patient" : "Update Patient";
     final initialValues = {
       "name": widget.patient?.name ?? '',
       "age": widget.patient?.age.toString() ?? '',
@@ -92,10 +94,10 @@ class _AddEditPatientPageState extends State<AddEditPatientPage> {
                       name: "gender",
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Gender',
+                        labelText: 'Sex',
                       ),
                       initialValue: initialValues["gender"],
-                      items: ['Male', 'Female', 'Other']
+                      items: ['Male', 'Female']
                           .map((gender) => DropdownMenuItem(
                                 value: gender,
                                 child: Text(gender),
@@ -110,7 +112,7 @@ class _AddEditPatientPageState extends State<AddEditPatientPage> {
                       name: "contactInfo",
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Contact Information',
+                        labelText: 'Address',
                       ),
                       initialValue: initialValues["contactInfo"] as String,
                       validator: FormBuilderValidators.required(),
@@ -159,7 +161,9 @@ class _AddEditPatientPageState extends State<AddEditPatientPage> {
                             context.read<PatientCubit>().addPatient(newPatient);
                           } else {
                             // Update existing patient
-                            context.read<PatientCubit>().editPatient(newPatient);
+                            context
+                                .read<PatientCubit>()
+                                .editPatient(newPatient);
                           }
                         }
                       },

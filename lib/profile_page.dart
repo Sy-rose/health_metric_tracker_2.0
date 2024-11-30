@@ -24,16 +24,16 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(
                 width: 20,
               ),
-              Image.asset("assets/pic.png", width: 50, height: 50),
+              Image.asset("assets/raymond.png", width: 100, height: 100),
               const SizedBox(
                 width: 10,
               ),
-              const Flexible(
+              Flexible(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
-                      "Carlo Valdez",
+                      "Ry Corps",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -43,8 +43,7 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Bachelor of Science in Computer Science",
                       softWrap: true,
-                      overflow: TextOverflow
-                          .visible, // Optional: Handles long text gracefully
+                      overflow: TextOverflow.visible,
                       style: TextStyle(fontSize: 15),
                     ),
                   ],
@@ -61,16 +60,16 @@ class ProfilePage extends StatelessWidget {
               const SizedBox(
                 width: 20,
               ),
-              Image.asset("assets/sairose.png", width: 60, height: 60),
+              Image.asset("assets/sairose.png", width: 100, height: 100),
               const SizedBox(
                 width: 10,
               ),
-              const Flexible(
+              Flexible(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
-                      "Sairose Eder",
+                      "Sai  Eder",
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -80,17 +79,16 @@ class ProfilePage extends StatelessWidget {
                     Text(
                       "Bachelor of Science in Computer Science",
                       softWrap: true,
-                      overflow: TextOverflow
-                          .visible, // Optional: Handles long text gracefully
+                      overflow: TextOverflow.visible,
                       style: TextStyle(fontSize: 15),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 25,
-              ),
             ],
+          ),
+          const SizedBox(
+            height: 25,
           ),
         ],
       ),

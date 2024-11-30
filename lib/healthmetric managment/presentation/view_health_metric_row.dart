@@ -1,35 +1,59 @@
 import 'package:flutter/material.dart';
-import 'package:health_metrics_tracker/healthmetric%20managment/domain/entities/health_metric.dart';
 
 class HealthMetricRow extends StatelessWidget {
-  final HealthMetric healthMetric;
-  final VoidCallback onTap;
+  final String label;
+  final dynamic value;
 
-  const HealthMetricRow({
+  const HealthMetricRow({super.key, required this.label, required this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            label,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "$value",
+            style: const TextStyle(fontSize: 16),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ViewHealthMetricRowPage extends StatelessWidget {
+  final Map<String, dynamic> healthMetrics;
+
+  const ViewHealthMetricRowPage({
     super.key,
-    required this.healthMetric,
-    required this.onTap,
+    required this.healthMetrics,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-      child: ListTile(
-        onTap: onTap,
-        title: Text(
-          'Date: ${healthMetric.date.toLocal().toString().split(' ')[0]}',
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-        subtitle: Column(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Health Metric Details"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Systolic BP: ${healthMetric.systolicBP} mmHg'),
-            Text('Diastolic BP: ${healthMetric.diastolicBP} mmHg'),
-            Text('Heart Rate: ${healthMetric.heartRate} bpm'),
-          ],
+          children: healthMetrics.entries
+              .map(
+                (entry) => HealthMetricRow(
+                  label: entry.key,
+                  value: entry.value,
+                ),
+              )
+              .toList(),
         ),
-        trailing: const Icon(Icons.arrow_forward_ios),
       ),
     );
   }

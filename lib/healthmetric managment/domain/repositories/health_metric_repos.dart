@@ -10,5 +10,6 @@ import 'package:health_metrics_tracker/healthmetric%20managment/domain/entities/
   Future<Either<Failure, void>>getHealthMetricById(String id);
   Future<Either<Failure, List<HealthMetric>>> getAllHealthMetricsByPatientId(String patientId);
   Future<Either<Failure, void>> deleteHealthMetric(String id);
+  Future<Either<Failure, List<HealthMetric>>> getAllHealthMetrics();
 }
 

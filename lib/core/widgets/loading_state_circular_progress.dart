@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Scaffold(
-      body: LoadingStateCircularProgress(),
-    ),
-  ));
-}
 
 class LoadingStateCircularProgress extends StatelessWidget {
   const LoadingStateCircularProgress({super.key});

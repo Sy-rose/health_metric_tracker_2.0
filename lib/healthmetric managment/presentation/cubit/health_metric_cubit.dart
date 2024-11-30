@@ -116,4 +116,6 @@ Future<void> editHealthMetric(HealthMetric healthMetric) async {
   void getAllHealthMetrics() {}
 
   void getHealthMetrics() {}
+
+  void addEditHealthMetric(HealthMetric healthMetric) {}
 }
