@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # health_metrics_tracker
 
 A new Flutter project.
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# health_metric_tracker_2.0
+>>>>>>> 9fd57e083c0850ef8d1700bebfc8640b85f0b9c1
